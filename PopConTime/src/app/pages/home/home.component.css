@@ -1,0 +1,35 @@
+.carousel-inner {
+  height: 700px;
+}
+.carousel-inner .carousel-item img {
+  height: 700px;
+  object-fit: cover;
+}
+.carousel-caption h3 {
+  color: rgb(122, 189, 237);
+  font-weight: 800;
+}
+.h5-Heading {
+  color: rgb(122, 189, 237);
+}
+.rowBanners {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+div ::-webkit-scrollbar {
+  display: none;
+}
+
+.singleBanner {
+  max-height: 200px;
+  object-fit: contain;
+  width: 100%;
+  box-sizing: content-box;
+  transition: 200ms;
+}
+.singleBanner:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+  max-height: 150px;
+}
