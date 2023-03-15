@@ -23,4 +23,9 @@ export class MovieApiServiceService {
       `${this.baseUrl}/trending/movie/day?api_key=${this.apiKey}`
     );
   }
+  getSearchMovie(data: any): Observable<any> {
+    return this.http.get(
+      `${this.baseUrl}/search/movie?api_key=${this.apiKey}&query=${data.search}`
+    );
+  }
 }

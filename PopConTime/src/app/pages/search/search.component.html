@@ -1,1 +1,32 @@
-<p>search works!</p>
+<div class="container mt-5 p-5">
+  <form [formGroup]="searchForm" (ngSubmit)="serach()">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <input
+          type="text"
+          formControlName="search"
+          class="form-control"
+          formControlName="search"
+          placeholder="Search Your Favourite Shows Here.."
+        />
+      </div>
+      <div class="col-md-2">
+        <button type="submit" class="btn">
+          <i class="fa-solid serach-btn fa-magnifying-glass"></i>
+        </button>
+      </div>
+    </div>
+  </form>
+  <div class="image-container mt-5">
+    <ng-container *ngFor="let s of serachResults">
+      <div class="row mt-2 row-highlight">
+        <img
+          class="result-img"
+          src="https://image.tmdb.org/t/p/original/{{ s.poster_path }}"
+          alt="..."
+        />
+        <span class="caption">{{ s.original_title }}</span>
+      </div>
+    </ng-container>
+  </div>
+</div>
