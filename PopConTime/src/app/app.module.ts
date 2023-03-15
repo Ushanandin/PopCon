@@ -7,10 +7,16 @@ import { ShowsComponent } from './pages/shows/shows.component';
 import { SearchComponent } from './pages/search/search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieApiServiceService } from './service/movie-api-service.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, ShowsComponent, SearchComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   providers: [MovieApiServiceService],
   bootstrap: [AppComponent],
 })
